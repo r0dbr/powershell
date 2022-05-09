@@ -23,6 +23,7 @@ if($err) {
 	throw $err
 }
 echo "listing servers"
+
 # Get VMs with snapshot tag
 $tagResList = (Get-AzResource -TagName "Backup-Daily") | foreach {
 	Get-AzResource -ResourceId $_.resourceid
